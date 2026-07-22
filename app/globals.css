@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  /* Core palette — workshop steel + hazard amber, not the usual AI defaults */
+  --color-ink: #14181d;      /* near-black, blue-charcoal */
+  --color-steel: #3c4a56;    /* mid steel-blue, secondary dark surfaces */
+  --color-steel-light: #6b7a86;
+  --color-paper: #eef0f2;    /* cool light gray page background */
+  --color-white: #ffffff;
+  --color-signal: #f2a93b;   /* hazard-lamp amber — the one bold accent */
+  --color-signal-dark: #d68f22;
+  --color-brake: #c1272d;    /* brake-light red — used sparingly */
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-steel: var(--color-steel);
+  --color-steel-light: var(--color-steel-light);
+  --color-paper: var(--color-paper);
+  --color-white: var(--color-white);
+  --color-signal: var(--color-signal);
+  --color-signal-dark: var(--color-signal-dark);
+  --color-brake: var(--color-brake);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Signature motif: a hazard-stripe rule, used once, at the hero/content seam */
+.hazard-rule {
+  height: 10px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--color-signal) 0px,
+    var(--color-signal) 16px,
+    var(--color-ink) 16px,
+    var(--color-ink) 32px
+  );
+}
+
+/* Signature motif: the job-docket card, used for the booking ticket & reviews */
+.docket {
+  position: relative;
+  background: var(--color-white);
+  border: 1px solid rgba(20, 24, 29, 0.1);
+  box-shadow: 0 24px 48px -20px rgba(20, 24, 29, 0.35);
+}
+
+.docket::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 28px;
+  width: 2px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(20, 24, 29, 0.15) 0,
+    rgba(20, 24, 29, 0.15) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+.stamp {
+  transform: rotate(-8deg);
+}
+
+/* Utility text-shadow for hero headline over photo */
+.text-shadow-hero {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Interior page hero band */
+.page-hero {
+  background: linear-gradient(
+      to bottom,
+      rgba(20, 24, 29, 0.72),
+      rgba(20, 24, 29, 0.86)
+    ),
+    var(--hero-image, none);
+  background-size: cover;
+  background-position: center;
+}
+
