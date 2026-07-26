@@ -19,7 +19,7 @@ const TIMELINE = [
   {
     year: "2013",
     title: "DVSA test centre approved",
-    text: "Repair Automotive becomes an approved MOT testing station, bringing testing in-house instead of sending customers elsewhere.",
+    text: "Repair Automotive becomes an approved MOT repair station, bringing testing in-house instead of sending customers elsewhere.",
   },
   {
     year: "2017",
@@ -69,7 +69,7 @@ export default function AboutPage() {
 
       {/* Founder story */}
       <section className="bg-white py-20 sm:py-28">
-        <div className="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="relative aspect-[4/5] w-full overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1632733711679-529326f6db12?fm=jpg&q=80&w=1000&auto=format&fit=crop"
@@ -108,9 +108,9 @@ export default function AboutPage() {
 
       {/* Timeline */}
       <section className="bg-paper py-20 sm:py-28">
-        <div className="mx-auto max-w-4xl px-5 sm:px-8">
+        <div className="mx-auto max-w-5xl px-5 sm:px-8">
           <span className="font-mono text-xs uppercase tracking-widest text-signal-dark">
-            Sixteen years on Weldon Road
+            On Weldon Road
           </span>
           <h2 className="mt-3 font-display text-3xl font-semibold uppercase leading-tight tracking-tight text-ink sm:text-4xl">
             How we got here
@@ -139,7 +139,7 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="bg-white py-20 sm:py-28">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <span className="font-mono text-xs uppercase tracking-widest text-signal-dark">
             How we work
           </span>
@@ -167,7 +167,7 @@ export default function AboutPage() {
 
       {/* Gallery */}
       <section className="bg-paper py-20 sm:py-28">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <span className="font-mono text-xs uppercase tracking-widest text-signal-dark">
             The workshop
           </span>
@@ -210,21 +210,21 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="bg-ink py-16 sm:py-20">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 sm:flex-row sm:items-center sm:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 sm:flex-row sm:items-center sm:px-8">
           <div>
             <h2 className="font-display text-2xl font-semibold uppercase tracking-tight text-white sm:text-3xl">
               Come and see the bays for yourself
             </h2>
             <p className="mt-2 max-w-md font-body text-white/65">
-              Book an appointment online or drop by our Weldon Road workshop — the
+              Get in touch or drop by our Weldon Road workshop — the
               kettle&apos;s always on.
             </p>
           </div>
           <Link
-            href="/booking"
+            href="/contact"
             className="flex flex-none items-center gap-2 bg-signal px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-signal-dark"
           >
-            Book an Appointment
+            Contact Us
             <ArrowRight size={16} />
           </Link>
         </div>

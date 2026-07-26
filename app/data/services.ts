@@ -13,7 +13,6 @@ export type Service = {
     | "BatteryCharging";
   image: string;
   imageAlt: string;
-  price: string;
   duration: string;
   intro: string[];
   included: string[];
@@ -32,16 +31,15 @@ const IMG = {
 export const services: Service[] = [
   {
     slug: "mot-testing",
-    title: "MOT Testing",
+    title: "MOT repair",
     shortDesc:
       "DVSA-approved test centre with a same-day retest if a fault is found on the day.",
     icon: "ClipboardCheck",
     image: IMG.garage,
     imageAlt: "A car parked inside the MOT test bay at Repair Automotive",
-    price: "£45",
     duration: "45–60 minutes",
     intro: [
-      "Repair Automotive is a full DVSA-approved MOT testing station, meaning your test happens on-site, on our own ramp, by testers we employ directly — not sent out to a partner garage.",
+      "Repair Automotive is a full DVSA-approved MOT repair station, meaning your test happens on-site, on our own ramp, by testers we employ directly — not sent out to a partner garage.",
       "If your car needs an advisory or a fail-item repairing, we can usually quote and fix it the same day, then retest free of charge before you leave the yard.",
     ],
     included: [
@@ -88,7 +86,6 @@ export const services: Service[] = [
     icon: "Wrench",
     image: IMG.engineWork,
     imageAlt: "A technician servicing an engine bay at Repair Automotive",
-    price: "From £129",
     duration: "2–3 hours",
     intro: [
       "We service to the exact schedule your manufacturer specifies, using the oil grade and parts your handbook calls for — which means servicing with us doesn't void a manufacturer warranty.",
@@ -138,7 +135,6 @@ export const services: Service[] = [
     icon: "Disc3",
     image: IMG.tyre,
     imageAlt: "Close-up of a car wheel where brake work is carried out",
-    price: "From £89",
     duration: "1–3 hours",
     intro: [
       "Spongy pedal, grinding noise, or a clutch that's starting to bite higher than it used to — brake and clutch wear rarely announce themselves clearly, so we measure rather than guess.",
@@ -188,7 +184,6 @@ export const services: Service[] = [
     icon: "Search",
     image: IMG.engineClose,
     imageAlt: "A diagnostic scan tool connected to a car engine",
-    price: "From £65",
     duration: "30–90 minutes",
     intro: [
       "A warning light is a symptom, not a diagnosis — our equipment reads the same manufacturer-level fault data a main dealer uses, across VW Group, BMW, Ford, and most other major makes.",
@@ -238,7 +233,6 @@ export const services: Service[] = [
     icon: "Cog",
     image: IMG.toolbox,
     imageAlt: "Tools used for gearbox and suspension work at Repair Automotive",
-    price: "From £110",
     duration: "1–4 hours",
     intro: [
       "Clunks over speed bumps, a gearbox that hesitates to select, or steering that pulls to one side all trace back to a handful of wear points — we isolate which one before quoting.",
@@ -288,7 +282,6 @@ export const services: Service[] = [
     icon: "CircleGauge",
     image: IMG.tyre,
     imageAlt: "Close-up of a car tyre being fitted at Repair Automotive",
-    price: "From £59 per tyre",
     duration: "20–40 minutes per axle",
     intro: [
       "We stock budget, mid-range and premium tyres from brands like Michelin, Continental and Goodyear, and can usually match your exact size same-day without a wait for delivery.",
@@ -338,7 +331,6 @@ export const services: Service[] = [
     icon: "Wind",
     image: IMG.garage,
     imageAlt: "A car interior being prepared for air conditioning service",
-    price: "From £75",
     duration: "45–90 minutes",
     intro: [
       "Air-con systems lose a small amount of refrigerant naturally every year — weak airflow or lukewarm air is usually the first sign it's due a re-gas rather than a sign of a bigger fault.",
@@ -388,7 +380,6 @@ export const services: Service[] = [
     icon: "BatteryCharging",
     image: IMG.engineWork,
     imageAlt: "A technician testing a car battery and electrical system",
-    price: "From £55",
     duration: "20–60 minutes",
     intro: [
       "Slow starting, dashboard warning lights, or a battery that's died once already are rarely random — we load-test the battery and check the alternator's charging rate before recommending a replacement.",

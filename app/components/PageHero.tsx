@@ -21,7 +21,7 @@ export default function PageHero({
       className="page-hero"
       style={{ ["--hero-image" as string]: `url(${image})` }}
     >
-      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
         <nav className="mb-6 flex flex-wrap items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-white/60">
           {crumbs.map((crumb, i) => (
             <span key={crumb.label} className="flex items-center gap-1.5">

@@ -12,7 +12,7 @@ export default function WhyUs() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/95 to-ink/70" />
 
-      <div className="relative mx-auto max-w-3xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
         <span className="font-mono text-xs uppercase tracking-widest text-signal">
           Our approach
         </span>

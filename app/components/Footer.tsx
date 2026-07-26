@@ -6,17 +6,17 @@ import { services } from "../data/services";
 export default function Footer() {
   return (
     <footer className="bg-ink pt-16">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-10 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" className="flex items-center gap-2.5">
-              <Logo height={36} />
+              <Logo height={36} variant="light" />
               <span className="font-display text-lg font-semibold uppercase tracking-tight text-white">
                 Repair Automotive
               </span>
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-white/55">
-              Independent MOT testing, servicing and repairs in Corby, Northamptonshire
+              Independent MOT repair, servicing and repairs in Corby, Northamptonshire
               since 2009.
             </p>
           </div>
@@ -47,7 +47,6 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-signal">About Us</Link></li>
               <li><Link href="/#reviews" className="hover:text-signal">Reviews</Link></li>
               <li><Link href="/contact" className="hover:text-signal">Find Us</Link></li>
-              <li><Link href="/booking" className="hover:text-signal">Book Online</Link></li>
             </ul>
           </div>
 
@@ -85,7 +84,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Repair Automotive. All rights reserved.
           </p>
           <p className="font-mono text-xs text-white/40">
-            Registered VOSA/DVSA MOT Testing Station
+            Registered VOSA/DVSA MOT repair Station
           </p>
         </div>
       </div>

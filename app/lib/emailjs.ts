@@ -6,11 +6,13 @@
  * root (see `.env.local.example`) with the values from your EmailJS
  * dashboard: https://dashboard.emailjs.com/admin
  *
- * They must be prefixed with NEXT_PUBLIC_ because the contact and booking
- * forms send email directly from the browser.
+ * They must be prefixed with NEXT_PUBLIC_ because the contact form sends
+ * email directly from the browser.
  *
- * Two separate Email Services are supported (as set up in the dashboard —
- * "booking" and "contact us") since they may point at different inboxes.
+ * Note: the booking service/template config below is currently unused —
+ * the appointment booking feature has been removed from the site. It's
+ * left in place in case booking gets re-added later; it has no effect
+ * otherwise.
  */
 export const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
 
@@ -19,6 +21,7 @@ export const EMAILJS_CONTACT_SERVICE_ID =
 export const EMAILJS_CONTACT_TEMPLATE_ID =
   process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID ?? "";
 
+// Currently unused (booking feature removed) — kept for future use.
 export const EMAILJS_BOOKING_SERVICE_ID =
   process.env.NEXT_PUBLIC_EMAILJS_BOOKING_SERVICE_ID ?? "";
 export const EMAILJS_BOOKING_TEMPLATE_ID =

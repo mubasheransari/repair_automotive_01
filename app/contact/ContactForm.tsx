@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import emailjs from "@emailjs/browser";
 import { CheckCircle2, AlertTriangle, ArrowRight, Loader2 } from "lucide-react";
 import {
@@ -14,6 +15,10 @@ import {
 type Status = "idle" | "sending" | "sent" | "error";
 
 export default function ContactForm() {
+  const searchParams = useSearchParams();
+  const presetService = searchParams.get("service");
+  const presetSubject = presetService ? `Enquiry about ${presetService}` : "";
+
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -120,6 +125,7 @@ export default function ContactForm() {
           type="text"
           name="subject"
           required
+          defaultValue={presetSubject}
           className="border border-ink/15 bg-white px-3.5 py-2.5 font-body text-sm text-ink outline-none placeholder:text-steel-light focus:border-signal-dark"
           placeholder="e.g. Question about a quote"
         />

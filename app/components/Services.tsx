@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { services } from "../data/services";
 import { ICONS } from "./icon-map";
 
 export default function Services() {
   return (
     <section id="services" className="bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-signal-dark">
@@ -43,13 +43,6 @@ export default function Services() {
                     {service.shortDesc}
                   </p>
                 </div>
-                <span className="mt-6 flex items-center gap-1 font-mono text-[12px] uppercase tracking-wide text-ink/60 transition-colors group-hover:text-signal-dark">
-                  {service.price}
-                  <ArrowUpRight
-                    size={14}
-                    className="ml-auto transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  />
-                </span>
               </Link>
             );
           })}

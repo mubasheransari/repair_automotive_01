@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Suspense } from "react";
 import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 import PageHero from "../components/PageHero";
 import ContactForm from "./ContactForm";
@@ -11,9 +11,13 @@ export const metadata: Metadata = {
 };
 
 const HOURS = [
-  ["Monday – Friday", "08:00 – 17:30"],
-  ["Saturday", "08:30 – 13:00"],
-  ["Sunday", "Closed"],
+  ["Monday", "09:00 – 17:00"],
+  ["Tuesday", "09:30 – 18:00"],
+  ["Wednesday", "09:30 – 18:00"],
+  ["Thursday", "09:30 – 18:00"],
+  ["Friday", "09:00 – 17:00"],
+  ["Saturday", "09:00 – 18:00"],
+  ["Sunday", "10:00 – 16:00"],
 ];
 
 export default function ContactPage() {
@@ -28,7 +32,7 @@ export default function ContactPage() {
       />
 
       <section className="bg-white py-20 sm:py-28">
-        <div className="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-signal-dark">
               Send a message
@@ -37,15 +41,13 @@ export default function ContactPage() {
               Get in touch
             </h2>
             <p className="mt-4 font-body text-[15px] leading-relaxed text-steel">
-              For a fixed quote or to book a slot, use our{" "}
-              <Link href="/booking" className="font-semibold text-ink underline decoration-signal decoration-2 underline-offset-2">
-                appointment form
-              </Link>{" "}
-              — it&apos;s quicker. For anything else, feel free to send us a
-              message using the form below and we&apos;ll get back to you.
+              Send us a message using the form below, or call us directly —
+              we&apos;ll get back to you within one working day.
             </p>
             <div className="mt-8">
-              <ContactForm />
+              <Suspense fallback={null}>
+                <ContactForm />
+              </Suspense>
             </div>
           </div>
 
@@ -107,13 +109,13 @@ export default function ContactPage() {
               />
             </div>
 
-            <Link
-              href="/booking"
+            <a
+              href="tel:+447480956261"
               className="mt-8 flex items-center justify-center gap-2 bg-signal px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-signal-dark"
             >
-              Book an Appointment Instead
+              Call Us Now
               <ArrowRight size={16} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

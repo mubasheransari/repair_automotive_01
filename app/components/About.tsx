@@ -23,7 +23,7 @@ const POINTS = [
 export default function About() {
   return (
     <section id="about" className="bg-paper py-20 sm:py-28">
-      <div className="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
         <div className="relative">
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <Image
@@ -33,14 +33,6 @@ export default function About() {
               sizes="(max-width: 1024px) 90vw, 560px"
               className="object-cover"
             />
-          </div>
-          <div className="absolute -bottom-6 -right-6 hidden bg-ink px-6 py-5 sm:block">
-            <p className="font-display text-3xl font-semibold text-signal">
-              16
-            </p>
-            <p className="font-mono text-[11px] uppercase tracking-widest text-white/60">
-              Years on Weldon Rd
-            </p>
           </div>
         </div>
 
@@ -52,12 +44,12 @@ export default function About() {
             An independent garage that still explains its work
           </h2>
           <p className="mt-5 font-body text-[17px] leading-relaxed text-steel">
-            Repair Automotive started in 2009 with one ramp and a promise:
-            never send a car away without telling the owner exactly what was
-            wrong and why. Sixteen years later we run four bays on Weldon
-            Road, but the promise hasn&apos;t changed — main-dealer diagnostics
-            at an independent price, from technicians who&apos;d rather keep
-            you as a customer for years than bill you once.
+            Repair Automotive provides professional vehicle servicing,
+            diagnostics, maintenance and repairs to customers throughout
+            Corby, Northamptonshire and the surrounding areas — with
+            reliable workmanship, honest advice and competitive pricing on
+            every job, whether it&apos;s routine servicing or complex
+            mechanical repairs.
           </p>
 
           <div className="mt-9 space-y-6">

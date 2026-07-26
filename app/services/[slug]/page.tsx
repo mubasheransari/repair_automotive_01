@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2, ArrowRight, ArrowUpRight } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import PageHero from "../../components/PageHero";
 import FAQAccordion from "../../components/FAQAccordion";
-import BookingCTA from "../../components/BookingCTA";
+import ServiceContactCTA from "../../components/ServiceContactCTA";
 import { services, getService } from "../../data/services";
 import { ICONS } from "../../components/icon-map";
 
@@ -42,7 +42,7 @@ export default function ServiceDetailPage({
   return (
     <>
       <PageHero
-        eyebrow={`${service.price} · ${service.duration}`}
+        eyebrow={service.duration}
         title={service.title}
         subtitle={service.shortDesc}
         image={`${service.image}?fm=jpg&q=60&w=1600&auto=format&fit=crop`}
@@ -54,7 +54,7 @@ export default function ServiceDetailPage({
       />
 
       <section className="bg-white py-20 sm:py-28">
-        <div className="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_320px] lg:gap-12">
+        <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_320px] lg:gap-12">
           <div>
             <div className="flex items-center gap-3">
               <span className="flex h-11 w-11 items-center justify-center bg-ink text-signal">
@@ -135,9 +135,8 @@ export default function ServiceDetailPage({
 
           {/* Sidebar */}
           <div>
-            <BookingCTA
+            <ServiceContactCTA
               service={service.title}
-              price={service.price}
               duration={service.duration}
             />
           </div>
@@ -146,7 +145,7 @@ export default function ServiceDetailPage({
 
       {/* Related services */}
       <section className="bg-paper py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <h2 className="font-display text-2xl font-semibold uppercase tracking-tight text-ink">
             Other services
           </h2>
@@ -168,10 +167,6 @@ export default function ServiceDetailPage({
                       {r.shortDesc}
                     </p>
                   </div>
-                  <span className="mt-5 flex items-center gap-1 font-mono text-[12px] uppercase tracking-wide text-ink/60 group-hover:text-signal-dark">
-                    View details
-                    <ArrowUpRight size={13} />
-                  </span>
                 </Link>
               );
             })}
@@ -180,21 +175,21 @@ export default function ServiceDetailPage({
       </section>
 
       <section className="bg-ink py-16 sm:py-20">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 sm:flex-row sm:items-center sm:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 sm:flex-row sm:items-center sm:px-8">
           <div>
             <h2 className="font-display text-2xl font-semibold uppercase tracking-tight text-white sm:text-3xl">
-              Ready to book your {service.title.toLowerCase()}?
+              Need help with {service.title.toLowerCase()}?
             </h2>
             <p className="mt-2 max-w-md font-body text-white/65">
-              Tell us your reg and what&apos;s wrong — we&apos;ll confirm a
-              price and the next available bay.
+              Tell us your reg and what&apos;s wrong — we&apos;ll get back to
+              you with the next available slot.
             </p>
           </div>
           <Link
-            href={`/booking?service=${encodeURIComponent(service.title)}`}
+            href={`/contact?service=${encodeURIComponent(service.title)}`}
             className="flex flex-none items-center gap-2 bg-signal px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-signal-dark"
           >
-            Book Now
+            Contact Us
             <ArrowRight size={16} />
           </Link>
         </div>

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Oswald, Inter, IBM_Plex_Mono, Bitter } from "next/font/google";
+import { League_Spartan, Inter, IBM_Plex_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const oswald = Oswald({
+const leagueSpartan = League_Spartan({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700", "800", "900"],
 });
 
 const inter = Inter({
@@ -22,17 +22,17 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500", "600"],
 });
 
-const bitter = Bitter({
+const fraunces = Fraunces({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
   title: "Repair Automotive | MOT, Servicing & Repairs in Corby, Northamptonshire",
   description:
-    "Repair Automotive is Corby's trusted independent garage for MOT testing, servicing, brakes, diagnostics and repairs. Honest advice, fair prices, same-day turnaround.",
+    "Repair Automotive is Corby's trusted independent garage for MOT repair, servicing, brakes, diagnostics and repairs. Honest advice, fair prices, same-day turnaround.",
 };
 
 export default function RootLayout({
@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${oswald.variable} ${inter.variable} ${plexMono.variable} ${bitter.variable} h-full antialiased`}
+      className={`${leagueSpartan.variable} ${inter.variable} ${plexMono.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-paper font-body text-ink">
         <Header />

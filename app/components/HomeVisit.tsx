@@ -3,15 +3,19 @@ import Link from "next/link";
 import { MapPin, Clock, Phone, ArrowRight } from "lucide-react";
 
 const HOURS = [
-  ["Monday – Friday", "08:00 – 17:30"],
-  ["Saturday", "08:30 – 13:00"],
-  ["Sunday", "Closed"],
+  ["Monday", "09:00 – 17:00"],
+  ["Tuesday", "09:30 – 18:00"],
+  ["Wednesday", "09:30 – 18:00"],
+  ["Thursday", "09:30 – 18:00"],
+  ["Friday", "09:00 – 17:00"],
+  ["Saturday", "09:00 – 18:00"],
+  ["Sunday", "10:00 – 16:00"],
 ];
 
 export default function HomeVisit() {
   return (
     <section id="location" className="bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <Image
@@ -61,18 +65,18 @@ export default function HomeVisit() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/booking"
+                href="/contact"
                 className="flex items-center gap-2 bg-signal px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-signal-dark"
               >
-                Book an Appointment
+                Contact &amp; Directions
                 <ArrowRight size={16} />
               </Link>
-              <Link
-                href="/contact"
+              <a
+                href="tel:+447480956261"
                 className="flex items-center gap-2 border border-ink/20 px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:border-ink/50"
               >
-                Contact &amp; Directions
-              </Link>
+                Call Now
+              </a>
             </div>
           </div>
         </div>

@@ -24,7 +24,7 @@ const REVIEWS = [
 export default function Testimonials() {
   return (
     <section id="reviews" className="bg-paper py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <span className="font-mono text-xs uppercase tracking-widest text-signal-dark">
           From the job book
         </span>
