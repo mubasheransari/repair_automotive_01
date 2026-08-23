@@ -70,7 +70,7 @@ export default function ContactPage() {
               </div>
               <div className="flex gap-3">
                 <Phone size={20} className="mt-0.5 flex-none text-signal-dark" />
-                <a href="tel:+447480956261" className="font-body text-[15px] font-medium text-ink">
+                <a href="tel:+447472238124" className="font-body text-[15px] font-medium text-ink">
                   +44 7480 956261
                 </a>
               </div>
@@ -110,7 +110,7 @@ export default function ContactPage() {
             </div>
 
             <a
-              href="tel:+447480956261"
+              href="tel:+447472238124"
               className="mt-8 flex items-center justify-center gap-2 bg-signal px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-signal-dark"
             >
               Call Us Now

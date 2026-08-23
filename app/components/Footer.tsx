@@ -67,7 +67,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="flex-none text-signal" />
-                <a href="tel:+447480956261">+44 7480 956261</a>
+                <a href="tel:+447472238124">+44 7480 956261</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="flex-none text-signal" />

@@ -28,7 +28,7 @@ export default function ServiceContactCTA({
       </dl>
 
       <a
-        href="tel:+447480956261"
+        href="tel:+447472238124"
         className="mt-5 flex items-center justify-center gap-2 bg-signal py-3 font-display text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-signal-dark"
       >
         <Phone size={15} />

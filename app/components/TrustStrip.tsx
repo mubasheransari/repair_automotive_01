@@ -1,6 +1,6 @@
 const STATS = [
-  { value: "DVSA", unit: "", label: "Approved MOT repair station" },
-  { value: "8,500+", unit: "", label: "MOTs carried out" },
+ // { value: "DVSA", unit: "", label: "Approved MOT repair station" },
+  //{ value: "8,500+", unit: "", label: "MOTs carried out" },
   { value: "4.9", unit: "/5", label: "Average customer rating" },
   { value: "92%", unit: "", label: "Repairs done same day" },
 ];
