@@ -5,11 +5,13 @@ import Services from "./components/Services";
 import WhyUs from "./components/WhyUs";
 import Testimonials from "./components/Testimonials";
 import HomeVisit from "./components/HomeVisit";
+import CautionNotice from "./components/CautionNotice";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <CautionNotice />
       <TrustStrip />
       <About />
       <Services />
