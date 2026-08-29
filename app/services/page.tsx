@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import PageHero from "../components/PageHero";
 import { services } from "../data/services";
 import { ICONS } from "../components/icon-map";
@@ -28,10 +27,9 @@ export default function ServicesIndexPage() {
             {services.map((service) => {
               const Icon = ICONS[service.icon];
               return (
-                <Link
+                <div
                   key={service.slug}
-                  href={`/services/${service.slug}`}
-                  className="group flex flex-col overflow-hidden border border-ink/10 bg-white transition-shadow hover:shadow-[0_24px_48px_-24px_rgba(20,24,29,0.25)]"
+                  className="group flex flex-col overflow-hidden border border-ink/10 bg-white"
                 >
                   <div className="relative aspect-[16/9] w-full overflow-hidden">
                     <Image
@@ -39,7 +37,7 @@ export default function ServicesIndexPage() {
                       alt={service.imageAlt}
                       fill
                       sizes="(max-width: 640px) 100vw, 480px"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover"
                     />
                     <span className="absolute left-0 top-0 flex h-11 w-11 items-center justify-center bg-ink text-signal">
                       <Icon size={20} />
@@ -53,7 +51,7 @@ export default function ServicesIndexPage() {
                       {service.shortDesc}
                     </p>
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>

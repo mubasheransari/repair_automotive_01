@@ -30,55 +30,6 @@ const IMG = {
 
 export const services: Service[] = [
   {
-    slug: "mot-testing",
-    title: "MOT repair",
-    shortDesc:
-      "DVSA-approved test centre with a same-day retest if a fault is found on the day.",
-    icon: "ClipboardCheck",
-    image: IMG.garage,
-    imageAlt: "A car parked inside the MOT test bay at Repair Automotive",
-    duration: "45–60 minutes",
-    intro: [
-      "Repair Automotive is a full DVSA-approved MOT repair station, meaning your test happens on-site, on our own ramp, by testers we employ directly — not sent out to a partner garage.",
-      "If your car needs an advisory or a fail-item repairing, we can usually quote and fix it the same day, then retest free of charge before you leave the yard.",
-    ],
-    included: [
-      "Full DVSA-standard 30-point test",
-      "Printed VT20/VT30 certificate on the spot",
-      "Plain-English explanation of any advisories",
-      "Free retest within 10 working days if a repair is needed",
-      "Digital reminder sent 4 weeks before renewal",
-    ],
-    process: [
-      {
-        title: "Book your slot",
-        text: "Pick a same-week appointment online or by phone — most tests are booked within 48 hours.",
-      },
-      {
-        title: "We test while you wait",
-        text: "Grab a coffee in reception or drop the keys and go — most MOTs are done inside the hour.",
-      },
-      {
-        title: "Walk-through, not just paperwork",
-        text: "If anything comes up, a technician shows you the actual part before you decide what to do.",
-      },
-    ],
-    faqs: [
-      {
-        q: "How early can I book my MOT?",
-        a: "Up to a month before your current certificate expires, without losing any remaining days on the old one.",
-      },
-      {
-        q: "What happens if my car fails?",
-        a: "You get a full breakdown of every fail item and advisory. If you repair it with us, the retest is free.",
-      },
-      {
-        q: "Can I wait on-site during the test?",
-        a: "Yes — our reception has seating, wifi and coffee, and most tests take under an hour.",
-      },
-    ],
-  },
-  {
     slug: "car-servicing",
     title: "Car Servicing",
     shortDesc:

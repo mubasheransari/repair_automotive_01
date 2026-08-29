@@ -25,14 +25,13 @@ export default function Services() {
           </Link>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden border border-ink/10 bg-white sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => {
             const Icon = ICONS[service.icon];
             return (
-              <Link
+              <div
                 key={service.slug}
-                href={`/services/${service.slug}`}
-                className="group flex flex-col justify-between bg-white p-6 transition-colors hover:bg-paper"
+                className="group flex flex-col justify-between border border-ink/10 bg-white p-6 -m-px"
               >
                 <div>
                   <Icon size={26} strokeWidth={1.75} className="text-signal-dark" />
@@ -43,7 +42,7 @@ export default function Services() {
                     {service.shortDesc}
                   </p>
                 </div>
-              </Link>
+              </div>
             );
           })}
         </div>
