@@ -46,7 +46,7 @@ export default function HomeVisit() {
               </div>
               <div className="flex gap-3">
                 <Phone size={20} className="mt-0.5 flex-none text-signal-dark" />
-                <a href="tel:+447472238124" className="font-body text-[15px] text-steel">
+                <a href="tel:+44 7472 238124" className="font-body text-[15px] text-steel">
                   +44 7480 956261
                 </a>
               </div>
@@ -72,7 +72,7 @@ export default function HomeVisit() {
                 <ArrowRight size={16} />
               </Link>
               <a
-                href="tel:+447472238124"
+                href="tel:+44 7472 238124"
                 className="flex items-center gap-2 border border-ink/20 px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:border-ink/50"
               >
                 Call Now
