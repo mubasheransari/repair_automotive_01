@@ -44,8 +44,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${leagueSpartan.variable} ${inter.variable} ${plexMono.variable} ${fraunces.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col bg-paper font-body text-ink">
+      <body
+        className="flex min-h-full flex-col bg-paper font-body text-ink"
+        suppressHydrationWarning
+      >
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

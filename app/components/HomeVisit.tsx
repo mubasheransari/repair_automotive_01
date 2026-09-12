@@ -47,7 +47,7 @@ export default function HomeVisit() {
               <div className="flex gap-3">
                 <Phone size={20} className="mt-0.5 flex-none text-signal-dark" />
                 <a href="tel:+44 7472 238124" className="font-body text-[15px] text-steel">
-                  +44 7480 956261
+                  +44 7472 238124
                 </a>
               </div>
               <div className="flex items-start gap-3">

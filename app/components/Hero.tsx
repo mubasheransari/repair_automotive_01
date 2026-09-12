@@ -37,7 +37,7 @@ export default function Hero() {
               className="flex items-center gap-2 border border-white/25 px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:border-white/60"
             >
               <Phone size={16} className="text-signal" />
-              +44 7480 956261
+              +44 7472 238124
             </a>
           </div>
 

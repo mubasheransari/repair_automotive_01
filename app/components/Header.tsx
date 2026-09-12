@@ -39,11 +39,11 @@ export default function Header() {
 
         <div className="hidden items-center gap-4 md:flex">
           <a
-            href="tel:+44 7472 238124"
+             href="tel:+44 7472 238124"
             className="flex items-center gap-2 font-mono text-sm font-medium text-ink"
           >
             <Phone size={16} className="text-signal-dark" />
-            +44 7480 956261
+            +44 7472 238124
           </a>
           <Link
             href="/contact"
@@ -82,7 +82,7 @@ export default function Header() {
               className="flex items-center justify-center gap-2 border border-ink/15 py-3 font-mono text-sm font-medium text-ink"
             >
               <Phone size={16} className="text-signal-dark" />
-              +44 7480 956261
+              +44 7472 238124
             </a>
             <Link
               href="/contact"
