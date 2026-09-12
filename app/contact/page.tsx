@@ -64,7 +64,7 @@ export default function ContactPage() {
                     href="https://maps.google.com/?q=Repair+Automotive+Ltd+90+Weldon+Road+Corby+NN17+5UE"
                     className="mt-1 inline-block font-medium text-ink underline decoration-signal decoration-2 underline-offset-2"
                   >
-                    Get directions
+                  Get directions
                   </a>
                 </div>
               </div>
