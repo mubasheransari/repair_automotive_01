@@ -2,12 +2,13 @@ import Link from "next/link";
 import { Phone, MapPin, Mail } from "lucide-react";
 import Logo from "./Logo";
 import { services } from "../data/services";
+import { blogs } from "../data/blogs";
 
 export default function Footer() {
   return (
     <footer className="bg-ink pt-16">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-10 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-5">
           <div>
             <Link href="/" className="flex items-center gap-2.5">
               <Logo height={36} variant="light" />
@@ -41,10 +42,29 @@ export default function Footer() {
 
           <div>
             <h4 className="font-mono text-xs uppercase tracking-widest text-white/50">
+              Blogs
+            </h4>
+            <ul className="mt-4 space-y-2.5">
+              {blogs.map((blog) => (
+                <li key={blog.slug}>
+                  <Link
+                    href={`/${blog.slug}`}
+                    className="font-body text-sm text-white/70 hover:text-signal"
+                  >
+                    {blog.navLabel}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-mono text-xs uppercase tracking-widest text-white/50">
               Garage
             </h4>
             <ul className="mt-4 space-y-2.5 font-body text-sm text-white/70">
               <li><Link href="/about" className="hover:text-signal">About Us</Link></li>
+              <li><Link href="/blogs" className="hover:text-signal">Blogs</Link></li>
               <li><Link href="/#reviews" className="hover:text-signal">Reviews</Link></li>
               <li><Link href="/contact" className="hover:text-signal">Find Us</Link></li>
             </ul>
